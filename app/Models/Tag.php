@@ -9,4 +9,23 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class Tag extends Model
 {
     use HasFactory, SoftDeletes;
+
+    protected $fillable = [
+        'slug'
+    ];
+
+    protected $hidden = [
+        'created_at',
+        'updated_at',
+        'deleted_at',
+        'pivot'
+    ];
+
+    public function meals() {
+        return $this->belongsToMany(Meal::class);
+    }
+
+    public function translations() {
+        return $this->hasMany(TagTranslation::class);
+    }
 }
