@@ -40,4 +40,8 @@ class Meal extends Model
     public function translations() {
         return $this->hasMany(MealTranslation::class);
     }
+
+    public function translation() {
+        return $this->hasOne(MealTranslation::class);
+    }
 }

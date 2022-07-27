@@ -20,7 +20,6 @@ class CreateMealTranslationsTable extends Migration
             $table->string('title');
             $table->mediumText('description');
             $table->timestamps();
-            $table->softDeletes();
         });
     }
 

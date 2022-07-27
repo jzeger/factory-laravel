@@ -17,7 +17,6 @@ class CreateIngredientsTable extends Migration
             $table->id();
             $table->string('slug');
             $table->timestamps();
-            $table->softDeletes();
         });
     }
 

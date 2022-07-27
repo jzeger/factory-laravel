@@ -19,7 +19,6 @@ class CreateIngredientTranslationsTable extends Migration
             $table->foreignId('language_id')->constrained();
             $table->string('title');
             $table->timestamps();
-            $table->softDeletes();
         });
     }
 

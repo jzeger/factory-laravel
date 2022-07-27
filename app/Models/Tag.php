@@ -4,11 +4,10 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Tag extends Model
 {
-    use HasFactory, SoftDeletes;
+    use HasFactory;
 
     protected $fillable = [
         'slug'
@@ -27,5 +26,9 @@ class Tag extends Model
 
     public function translations() {
         return $this->hasMany(TagTranslation::class);
+    }
+
+    public function translation() {
+        return $this->hasOne(TagTranslation::class);
     }
 }
