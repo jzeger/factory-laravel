@@ -1,2 +1,2 @@
 # factory-laravel
- Factory - Zadatak Backend
+ Projektni zadatak - Jela svijeta
